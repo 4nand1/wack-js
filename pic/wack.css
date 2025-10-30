@@ -1,0 +1,50 @@
+body {
+  text-align: center;
+  background: #ffbb00;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+#score {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 945px;
+  margin: 30px auto;
+  gap: 15px;
+}
+
+.hole {
+  width: 300px;
+  height: 200px;
+  background: url("mole-hill.png") bottom center / contain no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.mole {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  width: 155px;
+  height: 140px;
+  background: url("mole-head.png") center / contain no-repeat;
+  transform: translateX(-50%);
+  transition: bottom 0.3s ease;
+}
+
+.hole.active .mole {
+  bottom: 55px;
+}
